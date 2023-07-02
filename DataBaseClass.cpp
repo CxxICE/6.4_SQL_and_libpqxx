@@ -70,7 +70,7 @@ public:
 			
 			if (!connectionPrepared)//подготовка запросов, если ранее не были созданы
 			{
-				connection.prepare("client_insert", "INSERT INTO clients(first_name, last_name) VALUES($1, $2);");
+				connection.prepare("client_insert", "INSERT INTO clients(id_client, first_name, last_name) VALUES($1, $2, $3);");
 				connection.prepare("email_insert", "INSERT INTO emails(id_client, email) VALUES($1, $2);");
 				connection.prepare("phone_insert", "INSERT INTO phone_numbers(id_client, phone_number) VALUES($1, $2);");
 
